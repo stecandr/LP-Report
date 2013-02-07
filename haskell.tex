@@ -1,0 +1,20 @@
+
+\chapter{Haskell}
+
+MASTERMIND
+
+DESCRIPTION
+
+MasterMind is a game of two players, the coder and the decoder, where the coder buids a secret code that the decoder has to find out. The coder gives out hints of the solution with black/red and white pegs. The black pegs tell the number of colors (or numbers) are in the right position, and the white pegs tell the number of colors that are in the wrong position.
+The game ends when the decoder finally finds out the secret code, before running out of tries.
+
+
+IMPLEMENTATION
+
+This MasterMind implementation uses the algorithm developed by \cite{2000067} Temporel and Kovacs (2003), where a Current Favourite Guess is used, and randomly we have to find a better CFG each time, until we get the solution.
+The coder user creates a file inside the same directory of the implemented algorithm with the code called clave.txt, with the numbers written between square brackets and separated by commas. The application then tries to guess the code, and at the end it creates a file called intentos.txt, where all the tries and guesses are shown.
+The numbers that can be chosen are between 1 and 6, and the size of the code is four.
+
+\centerline{\includegraphics[scale=0.5]{imagenes/haskell1} }
+\centerline{\includegraphics[scale=0.5]{imagenes/haskell2} }
+\centerline{\includegraphics[scale=0.5]{imagenes/haskell3} }
