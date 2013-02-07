@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESCUELA SUPERIOR POLITECNICA DEL LITORAL
+% Integrantes:
+%                 	Kevin Silva
+%			Stella Andrade
+% 			Danny Ponce		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTAS:
+% * Las imagenes en JPG deben de ser en 450 x 400 pixeles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Tipo de documento
+\documentclass[letterpaper,12pt,twoside,spanish]{book}
+
+% Librerias 
+\usepackage[ansinew]{inputenc}										% Necesario para compatibilidade de  algunas palabras con acento
+\usepackage[english,spanish]{babel}									% Para espannol
+\usepackage{graphicx}												% Para graficos
+\usepackage{tocbibind}												% Biblio en indice
+\usepackage{anysize}												% Soporte para el comando \marginsize
+\usepackage[pdftex=true,colorlinks=true,plainpages=false]{hyperref} % Soporte hipertexto
+																	% para origen palabra
+%----------------------------------------------------------------------------------------------------------
+
+% Margenes 
+\marginsize{3cm}{3cm}{2.5cm}{2.5cm}
+%-----------------------------------------------------------------------------------------------------------
+
+%Inicio del documento ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{document}
+
+\pagenumbering{roman}
+
+
+\input{includes/portada.tex}							% Include de portada							
+\maketitle												% Compila parametros de la portada
+
+\mbox{}
+\newpage
+\include{includes/contents}								% Tabla de contenido (indice)
+
+
+\pagenumbering{arabic}
+\input {capitulos/android.tex}				%Android
+\input {capitulos/python.tex}				%Python
+\input {capitulos/haskell.tex}				%Haskell
+\input {capitulos/experiences.tex}			%Experiencias
+
+
+\bibliographystyle{plain}								% Utiliza el archivo ''plain.bst''
+\bibliography{bib/b.bib}							% Espera el archivo con extension bib
+															% ''*.bib''
+
+\end{document}
